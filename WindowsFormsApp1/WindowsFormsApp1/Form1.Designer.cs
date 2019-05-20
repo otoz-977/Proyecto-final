@@ -32,9 +32,9 @@
             this.Cont = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.Questions = new System.Windows.Forms.Panel();
+            this.Ans = new System.Windows.Forms.TextBox();
+            this.Q2 = new System.Windows.Forms.TextBox();
             this.Q1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.Questions.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,14 +71,31 @@
             // Questions
             // 
             this.Questions.BackColor = System.Drawing.Color.Silver;
-            this.Questions.Controls.Add(this.textBox3);
-            this.Questions.Controls.Add(this.textBox2);
+            this.Questions.Controls.Add(this.Ans);
+            this.Questions.Controls.Add(this.Q2);
             this.Questions.Controls.Add(this.Q1);
-            this.Questions.Location = new System.Drawing.Point(809, 411);
+            this.Questions.Location = new System.Drawing.Point(387, 132);
             this.Questions.Name = "Questions";
-            this.Questions.Size = new System.Drawing.Size(160, 185);
+            this.Questions.Size = new System.Drawing.Size(228, 140);
             this.Questions.TabIndex = 3;
             this.Questions.Visible = false;
+            // 
+            // Ans
+            // 
+            this.Ans.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Ans.Location = new System.Drawing.Point(64, 94);
+            this.Ans.Name = "Ans";
+            this.Ans.Size = new System.Drawing.Size(54, 30);
+            this.Ans.TabIndex = 2;
+            // 
+            // Q2
+            // 
+            this.Q2.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Q2.Location = new System.Drawing.Point(14, 58);
+            this.Q2.Name = "Q2";
+            this.Q2.ReadOnly = true;
+            this.Q2.Size = new System.Drawing.Size(166, 30);
+            this.Q2.TabIndex = 1;
             // 
             // Q1
             // 
@@ -86,25 +103,8 @@
             this.Q1.Location = new System.Drawing.Point(14, 16);
             this.Q1.Name = "Q1";
             this.Q1.ReadOnly = true;
-            this.Q1.Size = new System.Drawing.Size(135, 30);
+            this.Q1.Size = new System.Drawing.Size(166, 30);
             this.Q1.TabIndex = 0;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(14, 58);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(135, 30);
-            this.textBox2.TabIndex = 1;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(53, 113);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(54, 30);
-            this.textBox3.TabIndex = 2;
             // 
             // Form1
             // 
@@ -132,8 +132,8 @@
         private System.Windows.Forms.Button Cont;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Panel Questions;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox Ans;
+        private System.Windows.Forms.TextBox Q2;
         private System.Windows.Forms.TextBox Q1;
     }
 }

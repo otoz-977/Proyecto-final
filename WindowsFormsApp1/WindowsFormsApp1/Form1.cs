@@ -15,46 +15,90 @@ namespace WindowsFormsApp1
     {
         int C = 0;
         int S = 0;
+        
+        
         bool special;  
         public Form1()
         {
             InitializeComponent();
         }
         private void Cont_Click(object sender, EventArgs e)
-        {        
+        {
+            Master ms = new Master();
+            //cheats
             if (!String.IsNullOrEmpty(textBox1.Text))
             {
                 if(textBox1.Text == "*")
                 {
                     S = 0;
-                   
+                    C = 0;
+                    textBox1.Text = string.Empty;
                 }
                 else 
                 {
                     S = Int32.Parse(textBox1.Text);
+                    C = 0;
+                    textBox1.Text = string.Empty;
+
                 }   
             }
-            Master ms = new Master();
+            
+            //permite seleccionar
+            if (!String.IsNullOrEmpty(Ans.Text) && (special == true))
+            {
+                if (Ans.Text == "a")
+                {
+                    
+                    
+                }
+                if (Ans.Text == "b")
+                {
+                   // Next(2);
+                   
+                }
+            }
+
+            //escribe el texto
             Diag.Text = ms.Scenery(C,S);
             C++;
-            string res = Diag.Text;
-            if(Diag.Text == "...")
-            {
-                S++;
-                C = 0;
-            }
+            
+           //esto hace el panel visible
             special = ms.GS;
             if (special == true)
             {
+
                 Questions.Visible = true;
                 Diag.Text = ms.Quest();
+                Q1.Text = ms.Q1;
+                Q2.Text = ms.Q2;
+               
+                
             }
             else
             {
                 Questions.Visible = false;
+                Q1.Text = string.Empty;
+                Q2.Text = string.Empty;
+                Ans.Text = string.Empty;
+                
             }
            
+
+            if (Diag.Text == "...")
+            {
+                //Next(1);
+                S++;
+                C = 0;
+            }
+            
+           
           
-    }
+        }
+
+        public  void Next(int add)
+        {
+            S = S + add;
+            C = 0;
+        }
     }
 }
